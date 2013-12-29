@@ -661,10 +661,7 @@ public class IrcConnection {
 	 * @since 0.9.4
 	 */
 	protected String getVersion() {
-		if (version != null) {
-			return version;
-		}
-		return IrcConnection.ABOUT;
+		return version != null ? version : IrcConnection.ABOUT;
 	}
 
 	/**
