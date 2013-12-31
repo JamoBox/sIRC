@@ -34,7 +34,7 @@ public class UserTest {
         final User user = new User("b", connection);
         user.sendAction(" hello ");
 
-	    verify(ircOutput).send(new IrcPacket(null, "PRIVMSG", "b", IrcPacket.CTCP + "ACTION hello " + IrcPacket.CTCP));
+	    verify(ircOutput).send(new IrcPacket(null, "PRIVMSG", "b", IrcPacket.CTCP + "ACTION  hello " + IrcPacket.CTCP));
     }
 
     @Test
